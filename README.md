@@ -16,8 +16,19 @@
 - 타인 계좌 송금 (동시성 이슈 방어)
 - 거래 내역 리스트 페이징 조회
 
----
-## 4. 핵심 기술 용어 정리
+## 4. 기술 스택 (Tech Stack)
+- **Language & Framework:** Java 17+, Spring Boot 3.x
+- **Database & ORM:** MySQL, Spring Data JPA / QueryDSL
+- **Cache & Concurrency:** Redis
+- **Infrastructure:** Docker
+
+## 5. 핵심 기술 챌린지 (Technical Challenge)
+- **주제:** 대규모 송금 및 잔액 충전 상황에서의 동시성 제어 (Concurrency Control)
+- **목표:**
+  - 동시에 여러 송금/충전 요청이 발생할 때 발생할 수 있는 Race Condition 방어
+  - Pessimistic/Optimistic Lock 및 Redis 분산 락 적용을 통한 데이터 무결성(Data Integrity) 확보
+
+## 6. 핵심 기술 용어 정리
 - **Robust:** 에러나 대용량 트래픽 속에서도 시스템이 죽지 않고 견고하게 버티는 상태
 - **Concurrency Control:** 여러 사용자가 동시에 데이터를 수정할 때 꼬이지 않도록 조율하는 기술
 - **Data Integrity / Consistency:** 데이터가 모순 없이 항상 올바르고 정확한 상태를 유지하는 것
